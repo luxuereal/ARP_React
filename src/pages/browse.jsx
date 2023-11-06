@@ -1,8 +1,10 @@
+import Footer from "../components/footer";
+
 const Browse = () => {
   return (
-    <div>
-      Browse
-    </div>
+    <>
+      <Footer />
+    </>
   )
 }
 
