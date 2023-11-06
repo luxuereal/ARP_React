@@ -7,6 +7,7 @@ import { slides, navs } from "../../contents/home";
 const Main = () => {
   return (
     <section className="w-full h-full z-10 relative">
+      
       <Carousel
         showThumbs={false}
         className="max-h-full"
@@ -36,6 +37,7 @@ const Main = () => {
           </div>
         ))}
       </Carousel>
+
       <nav className="absolute bottom-20 h-32 w-full py-4 px-8 bg-white bg-opacity-30 border border-normalGray">
         <div className="w-full h-full grid lg:grid-cols-6 grid-cols-3 border-2 border-normalGray">
           {navs.map((nav, id) => (
@@ -49,6 +51,7 @@ const Main = () => {
           ))}
         </div>
       </nav>
+      
     </section>
   );
 };
