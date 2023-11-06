@@ -1,9 +1,14 @@
+import Header from "./components/home/header";
+import Footer from "./components/footer";
+import Main from "./components/home/main";
 
 const App = () => {
   return (
-    <div className="bg-gray-500 w-full h-full">
-      
-    </div>
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
   );
 }
 

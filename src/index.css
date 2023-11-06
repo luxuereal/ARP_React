@@ -12,11 +12,20 @@ body {
 }
 
 #root {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.mask-image {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 40%, black 60%);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 60%);
+}
+
+.ibm-font {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
 }
