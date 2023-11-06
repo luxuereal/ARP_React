@@ -6,7 +6,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xsm': {'min': '120px', 'max': '640px'}
+      }
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
