@@ -1,29 +1,22 @@
-import { useState } from "react";
+import { useLocation } from "react-router";
 
 import Sidebar from "../components/browse/sidebar";
 import Main from "../components/browse/main";
+import Results from "../components/browse/results";
 import Footer from "../components/footer";
 
 const Browse = () => {
-
-  const [viewList, setViewList] = useState(false); 
+  const path = useLocation().pathname.includes("/results");
 
   return (
     <>
       <div className="flex w-full h-full">
-        <Sidebar
-          view={viewList}
-          setView={setViewList}
-        />
-        {
-          viewList ? 
-            <></>
-          : <Main />
-        }
+        <Sidebar path={path} />
+        {path ? <Results /> : <Main />}
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default Browse;
