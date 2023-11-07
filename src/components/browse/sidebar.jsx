@@ -1,10 +1,6 @@
 import { FiMenu, FiSearch } from "react-icons/fi";
-// import { Link, useMatch } from "react-router-dom";
 
-const Sidebar = () => {
-
-  // const match = useMatch();
-
+const Sidebar = ({ path }) => {
   return (
     <nav className="w-[360px] h-full bg-[#4B4A4A]">
       <div className="w-full h-20 p-2 bg-[#3E3E3E] flex justify-between items-center justify-items-stretch border-b border-normalGray">
@@ -44,12 +40,12 @@ const Sidebar = () => {
         <button className="text-lg font-bold py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#B2B1B1] text-center">
           {"2. Engine"}
         </button>
-        <button 
+        <a
+          href={`/browse/results`}
           className="ml-[35%] justify-self-end text-lg font-bold py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#ED1C24] text-center"
-          // onClick={handleClick}
         >
           {"Find"}
-        </button>
+        </a>
         <hr className="border-2 border-[#707070]" />
         <h6 className="mt-2 w-full text-[#A0A0A0] text-base text-center">
           {"Pro Series Rod Bolts by Dimensions"}
@@ -64,32 +60,31 @@ const Sidebar = () => {
           {"Find"}
         </button>
         <hr className="border-2 border-[#707070]" />
-        {/* {
-          view ?
-            <div className="mx-6 w-full grid grid-cols-2 gap-2">
-              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Instructions"}
-              </button>
-              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Rod Bolt Tech"}
-              </button>
-              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Tech Videos"}
-              </button>
-              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Rod Bolt FAQ"}
-              </button>
-            </div>
-          :  */}
-            <>
-              <button className="text-lg py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Rod Bolt Instructions"}
-              </button>
-              <button className="text-lg py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Tech Videos"}
-              </button>
-            </> 
-        {/* } */}
+        {path ? (
+          <div className="mx-6 grid grid-cols-2 gap-2">
+            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Instructions"}
+            </button>
+            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Rod Bolt Tech"}
+            </button>
+            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Tech Videos"}
+            </button>
+            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Rod Bolt FAQ"}
+            </button>
+          </div>
+        ) : (
+          <>
+            <button className="text-lg py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Rod Bolt Instructions"}
+            </button>
+            <button className="text-lg py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Tech Videos"}
+            </button>
+          </>
+        )}
       </div>
     </nav>
   );

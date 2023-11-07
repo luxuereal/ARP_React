@@ -2,9 +2,8 @@ import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="absolute top-0">      
+    <header className="absolute top-0">
       <div className="w-full bg-cover relative z-20 !min-h-[60px]">
-
         <img
           src="/assets/header.png"
           className="z-20 drop-shadow-md object-cover !min-h-[60px]"
@@ -33,7 +32,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-        
       </div>
     </header>
   );
