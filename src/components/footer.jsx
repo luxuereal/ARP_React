@@ -2,7 +2,6 @@ const Footer = () => {
   return (
     <footer className="bg-black w-full h-20 fixed bottom-0 z-10 xl:p-4 sm:p-2">
       <div className="w-full h-full relative">
-
         <div className="absolute h-full my-auto lg:left-8 md:left-6 flex xl:gap-4 lg:gap-3 md:gap-2 sm:gap-1 items-center">
           {["F", "T", "I", "Y", "U"].map((num, id) => (
             <button
@@ -28,7 +27,6 @@ const Footer = () => {
         <span className="absolute text-white xl:text-sm sm:text-[10px] xsm:text-[8px] bottom-0 xl:right-3 sm:right-1">
           {"© 2018 Automotive Racing Products, Inc."}
         </span>
-        
       </div>
     </footer>
   );
