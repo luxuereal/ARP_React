@@ -7,6 +7,9 @@ import { BsCartPlus, BsCartDash } from "react-icons/bs";
 import TabPanel from "./tabs/tabPanel";
 import Tab1 from "./tabs/tab1";
 import Tab2 from "./tabs/tab2";
+import Tab3 from "./tabs/tab3";
+import Tab4 from "./tabs/tab4";
+import Tab5 from "./tabs/tab5";
 import { bolts } from "../../utility/contents/browse";
 import { getValue } from "../../utility/functions/getValue";
 
@@ -30,11 +33,11 @@ const Detail = () => {
               <FiMenu />
             </span>
           </button>
-          <img
+          <a href="/"><img
             src="/assets/logo.png"
             alt=""
             className="justify-self-center h-20 object-contain self-start"
-          />
+          /></a>
           <button className="w-10 h-10 rounded-full bg-white self-end justify-self-end">
             <span className="flex justify-center text-xl">
               <FiSearch />
@@ -126,8 +129,19 @@ const Detail = () => {
           : tab === 2 ?
             <Tab2 
               data={bolt.part}
+              images={bolt.images}
             />
-          : <></>
+          : tab === 3 ?
+            <Tab3 
+              data={bolt.installation}
+            />
+          : tab === 4 ?
+            <Tab4 
+              data={bolt.related}
+            />
+          : <Tab5
+              data={bolt.replacement}
+            />
         }
       </div>
     </>

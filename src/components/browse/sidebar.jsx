@@ -9,11 +9,13 @@ const Sidebar = ({ pathCase }) => {
             <FiMenu />
           </span>
         </button>
-        <img
-          src="/assets/logo.png"
-          alt=""
-          className="justify-self-center h-full object-contain"
-        />
+        <a href="/" className="justify-self-center h-full">
+          <img
+            src="/assets/logo.png"
+            alt=""
+            className="h-full object-contain"
+          />
+        </a>
         <button className="w-10 h-10 rounded-full bg-white justify-self-end">
           <span className="flex justify-center text-xl">
             <FiSearch />
