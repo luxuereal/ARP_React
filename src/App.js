@@ -27,6 +27,12 @@ const router = createBrowserRouter([
           {
             path: "/browse/results/:kitId",
             element: <Browse />,
+            children: [
+              {
+                path: '/browse/results/:kitId/detail',
+                element: <Browse />
+              }
+            ]
           },
         ],
       },
