@@ -11,11 +11,9 @@ const Header = () => {
         />
 
         <div className="absolute top-0 w-full h-full flex justify-center">
-          <img
-            src="/assets/logo.png"
-            className="absolute z-30 !h-full pt-4 pb-1 self-end"
-            alt=""
-          />
+          <a href="/" className="absolute z-30 !h-full pt-4 pb-1 self-end">
+            <img src="/assets/logo.png" alt="" />
+          </a>
         </div>
 
         <div className="absolute top-0 w-full h-full flex justify-end items-center">
