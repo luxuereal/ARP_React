@@ -12,10 +12,7 @@ const Header = () => {
 
         <div className="absolute top-0 w-full h-full flex justify-center">
           <a href="/" className="absolute z-30 !h-full pt-4 pb-1 self-end">
-            <img
-              src="/assets/logo.png"             
-              alt=""
-            />
+            <img src="/assets/logo.png" alt="" />
           </a>
         </div>
 

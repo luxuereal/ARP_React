@@ -71,26 +71,27 @@ const Sidebar = ({ pathCase }) => {
               {"Tech Videos"}
             </button>
           </>
-          
-        ) : pathCase === 2 && (
-          <div className="mx-6 grid grid-cols-2 gap-2">
-            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-              {"Instructions"}
-            </button>
-            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-              {"Rod Bolt Tech"}
-            </button>
-            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-              {"Tech Videos"}
-            </button>
-            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-              {"Rod Bolt FAQ"}
-            </button>
-          </div>
+        ) : (
+          pathCase === 2 && (
+            <div className="mx-6 grid grid-cols-2 gap-2">
+              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+                {"Instructions"}
+              </button>
+              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+                {"Rod Bolt Tech"}
+              </button>
+              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+                {"Tech Videos"}
+              </button>
+              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+                {"Rod Bolt FAQ"}
+              </button>
+            </div>
+          )
         )}
       </div>
     </nav>
-  )
+  );
 };
 
 export default Sidebar;

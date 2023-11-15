@@ -6,7 +6,10 @@ const Info = ({ image, id, series, bolt }) => {
         <h3 className="text-2xl">{`Kit #: ${id}`}</h3>
         <h3 className="text-2xl">{series}</h3>
         <div className="w-full flex justify-end">
-          <a href={`${id}/detail`} className="rounded-md bg-[#818181] text-[#D3D3D3] py-2 px-8 text-lg mr-4">
+          <a
+            href={`${id}/detail`}
+            className="rounded-md bg-[#818181] text-[#D3D3D3] py-2 px-8 text-lg mr-4"
+          >
             {"Kit Instructions"}
           </a>
         </div>

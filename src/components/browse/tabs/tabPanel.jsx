@@ -52,7 +52,7 @@ const TabPanel = ({ id, setId }) => {
         {"Replacement Parts"}
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default TabPanel
+export default TabPanel;

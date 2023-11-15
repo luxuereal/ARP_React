@@ -22,7 +22,7 @@ const Detail = () => {
 
   const changeTab = (id) => {
     setTab(id);
-  }
+  };
 
   return (
     <>
@@ -33,11 +33,13 @@ const Detail = () => {
               <FiMenu />
             </span>
           </button>
-          <a href="/"><img
-            src="/assets/logo.png"
-            alt=""
-            className="justify-self-center h-20 object-contain self-start"
-          /></a>
+          <a href="/">
+            <img
+              src="/assets/logo.png"
+              alt=""
+              className="justify-self-center h-20 object-contain self-start"
+            />
+          </a>
           <button className="w-10 h-10 rounded-full bg-white self-end justify-self-end">
             <span className="flex justify-center text-xl">
               <FiSearch />
@@ -116,33 +118,19 @@ const Detail = () => {
           </div>
         </div>
 
-        <TabPanel 
-          id={tab}
-          setId={changeTab}
-        />
+        <TabPanel id={tab} setId={changeTab} />
 
-        {
-          tab === 1 ?
-            <Tab1
-              data={bolt.kit}
-            />
-          : tab === 2 ?
-            <Tab2 
-              data={bolt.part}
-              images={bolt.images}
-            />
-          : tab === 3 ?
-            <Tab3 
-              data={bolt.installation}
-            />
-          : tab === 4 ?
-            <Tab4 
-              data={bolt.related}
-            />
-          : <Tab5
-              data={bolt.replacement}
-            />
-        }
+        {tab === 1 ? (
+          <Tab1 data={bolt.kit} />
+        ) : tab === 2 ? (
+          <Tab2 data={bolt.part} images={bolt.images} />
+        ) : tab === 3 ? (
+          <Tab3 data={bolt.installation} />
+        ) : tab === 4 ? (
+          <Tab4 data={bolt.related} />
+        ) : (
+          <Tab5 data={bolt.replacement} />
+        )}
       </div>
     </>
   );
