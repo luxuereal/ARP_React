@@ -8,13 +8,18 @@ import { getValue } from "../../utility/functions/getValue";
 const Results = () => {
   const kitId = useLocation().pathname.substr(16);
 
-  const bolt = bolts.list.filter((bolt) => bolt.id === kitId)[0]
+  const bolt = bolts.list.filter((bolt) => bolt.id === kitId)[0];
 
   return (
     <div className="p-8 w-[calc(100%-360px)] h-[calc(100%-80px)]">
       <div className="flex justify-between items-center mb-8">
         <h3 className="text-3xl font-bold text-black">{bolts.series}</h3>
-        {kitId !== "" && <a href="/browse/results" className="text-xl mr-16 flex items-center"><GoArrowLeft />&nbsp;{'Back to list'}</a>}
+        {kitId !== "" && (
+          <a href="/browse/results" className="text-xl mr-16 flex items-center">
+            <GoArrowLeft />
+            &nbsp;{"Back to list"}
+          </a>
+        )}
       </div>
       {kitId !== "" ? (
         <Info
@@ -31,9 +36,7 @@ const Results = () => {
               className="p-8 flex flex-col border border-normalGray justify-center"
               key={`bolt-${id}`}
             >
-              <span className="font-bold text-3xl text-center">
-                {bolt.id}
-              </span>
+              <span className="font-bold text-3xl text-center">{bolt.id}</span>
               <span className="font-bold text-3xl text-center">
                 {getValue(bolt.part, "Model")}
               </span>
