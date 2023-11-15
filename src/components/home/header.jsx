@@ -10,11 +10,15 @@ const Header = () => {
           alt=""
         />
 
-        <div className="absolute top-0 w-full h-full flex justify-center">
-          <a href="/" className="absolute z-30 !h-full pt-4 pb-1 self-end">
-            <img src="/assets/logo.png" alt="" />
-          </a>
-        </div>
+        <a href="/">
+          <div className="absolute top-0 w-full h-full flex justify-center">
+            <img
+              src="/assets/logo.png"
+              className="absolute z-30 !h-full pt-4 pb-1 self-end"
+              alt=""
+            />
+          </div>
+        </a>
 
         <div className="absolute top-0 w-full h-full flex justify-end items-center">
           <div className="2xl:mr-56 xl:mr-40 lg:mr-32 md:mr-24 sm:mr-16 xsm:hidden">
