@@ -1,6 +1,6 @@
 const Tab1 = ({ data }) => {
   return (
-    <div className="grid grid-cols-2 gap-y-8 w-full p-4 text-xl mt-8">
+    <div className="grid grid-cols-2 mobile:grid-cols-1 gap-y-8 w-full p-4 text-xl mt-8">
       <div className="flex gap-8">
         <span className="w-[30%] text-end font-bold">{"Sockets"}</span>
         <span className="text-start">{data.sockets}</span>

@@ -1,4 +1,5 @@
 import { FaSearch } from "react-icons/fa";
+import { FiMenu, FiSearch } from "react-icons/fi";
 
 const Header = () => {
   return (
@@ -10,13 +11,22 @@ const Header = () => {
           alt=""
         />
 
-        <div className="absolute top-0 w-full h-full flex justify-center">
-          <a href="/" className="absolute z-30 !h-full pt-4 pb-1 self-end">
-            <img src="/assets/logo.png" alt="" />
-          </a>
-        </div>
+        <a href="/">
+          <div className="absolute top-0 w-full h-full flex justify-center">
+            <img
+              src="/assets/logo.png"
+              className="absolute z-30 !h-full pt-4 pb-1 self-end mobile:hidden"
+              alt=""
+            />
+            <img
+              src="/assets/mobile_logo.png"
+              className="absolute z-30 !h-full pt-1 pb-1 self-end hidden mobile:block"
+              alt=""
+            />
+          </div>
+        </a>
 
-        <div className="absolute top-0 w-full h-full flex justify-end items-center">
+        <div className="absolute top-0 w-full h-full flex justify-end items-center mobile:hidden">
           <div className="2xl:mr-56 xl:mr-40 lg:mr-32 md:mr-24 sm:mr-16 xsm:hidden">
             <div className="w-full h-full relative">
               <input className="bg-[#D3D3D3] max-w-[80] 2xl:w-80 2xl:h-10 lg:w-60 lg:h-8 md:w-48 md:h-6 sm:w-32 sm:h-6 border !border-[#D3D3D3] outline-none rounded-md" />
@@ -30,6 +40,18 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+        <button className="absolute hidden mobile:block bottom-4 left-3 w-8 h-8 rounded-full bg-white justify-self-start">
+          <span className="flex justify-center text-xl">
+            <FiMenu />
+          </span>
+        </button>
+
+        <button className="absolute hidden mobile:block bottom-4 right-3 w-8 h-8 rounded-full bg-white justify-self-start">
+          <span className="flex justify-center text-xl">
+            <FiSearch />
+          </span>
+        </button>
       </div>
     </header>
   );
