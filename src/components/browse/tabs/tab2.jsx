@@ -6,7 +6,7 @@ const Tab2 = ({ data, images }) => {
     <div className="w-full">
       <Carousel
         showThumbs={false}
-        className="h-40 w-96 my-8 mx-auto"
+        className="h-40 w-96 mobile:w-full my-8 mx-auto"
         autoPlay
         infiniteLoop
       >
@@ -15,12 +15,12 @@ const Tab2 = ({ data, images }) => {
             src={img}
             alt=""
             key={`part-img-${id}`}
-            className="h-40 w-96 object-cover"
+            className="h-40 w-96 mobile:w-full object-cover"
           />
         ))}
       </Carousel>
       
-      <div className="grid grid-cols-2 w-full gap-x-8 gap-y-2">
+      <div className="grid grid-cols-2 mobile:grid-cols-1 w-full gap-x-8 gap-y-2">
         {data
           .filter((opt) => opt.name !== "Model" && opt.name !== "Image")
           .map((opt, id) => (

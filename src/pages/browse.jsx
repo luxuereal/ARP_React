@@ -13,7 +13,7 @@ const Browse = () => {
 
   return (
     <>
-      <div className="flex w-full h-full">
+      <div className="flex w-full h-full mobile:flex-col">
         {
           pathCase === 1 ?
             <Detail />
@@ -30,7 +30,9 @@ const Browse = () => {
 
         }
       </div>
-      <Footer />
+      <div className="mobile:hidden">
+        <Footer />
+      </div>
     </>
   );
 };
