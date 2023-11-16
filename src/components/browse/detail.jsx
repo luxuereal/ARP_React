@@ -95,7 +95,10 @@ const Detail = () => {
               className="h-full object-contain"
             />
           </a>
-          <a href="/browse/results" className="w-10 h-10 rounded-full bg-white justify-self-end flex items-center justify-center">
+          <a
+            href="/browse/results"
+            className="w-10 h-10 rounded-full bg-white justify-self-end flex items-center justify-center"
+          >
             <span className="text-xl">
               <FiSearch />
             </span>
@@ -109,21 +112,26 @@ const Detail = () => {
         </div>
       </nav>
 
-
-      <div className="p-8 xsm:w-[calc(100%-360px)] xsm:h-[calc(100%-80px)] mobile:w-full mobile:flex mobile:flex-col">
-        <div className="w-full xsm:h-40 flex justify-between mobile:gap-2 mobile:flex-col mb-2">
+      <div className="p-8 w-[calc(100%-360px)] h-[calc(100%-80px)] mobile:w-full mobile:flex mobile:flex-col overflow-y-auto">
+        <div className="w-full flex flex-col lg:flex-row justify-between mobile:gap-2 mobile:flex-col mb-2">
           <div>
-            <h3 className="text-3xl text-[#ED1B25] mobile:text-center mobile:text-2xl">{`ARP-${kitId}`}</h3>
-            <h4 className="text-2xl mt-2 mobile:text-center mobile:text-xl">{getValue(bolt.part, "Material")}</h4>
+            <h3 className="xl:text-3xl text-xl text-[#ED1B25] text-center mobile:text-2xl">{`ARP-${kitId}`}</h3>
+            <h4 className="xl:text-2xl text-base mt-2 text-center mobile:text-xl">
+              {getValue(bolt.part, "Material")}
+            </h4>
           </div>
-          <div className="w-[40%] mobile:w-full mobile:mt-2">
-            <h4 className="bg-[#626262] text-xl text-white text-center py-1">
+
+          <div className="lg:w-[40%] lg:mt-0 w-full mt-2">
+            <h4 className="bg-[#626262] xl:text-xl text-base text-white text-center py-1">
               {"FITS"}
             </h4>
-            <h4 className="text-2xl text-center mt-2 mobile:text-xl mobile:text-center">{bolts.series}</h4>
+            <h4 className="xl:text-2xl text-lg text-center mt-2 mobile:text-xl mobile:text-center">
+              {bolts.series}
+            </h4>
           </div>
-          <div className="flex flex-col w-80 gap-2 mobile:w-full mobile:mt-2 mobile:mb-4">
-            <h4 className="bg-[#626262] text-xl text-white text-center py-1">
+
+          <div className="flex flex-col xl:w-80 lg:w-48 gap-2 lg:mt-0 w-full mt-2 mb-4">
+            <h4 className="bg-[#626262] xl:text-xl text-base text-white text-center py-1">
               {"JOBBER PRICE"}
             </h4>
             <div className="flex justify-between items-center px-4">
@@ -131,17 +139,17 @@ const Detail = () => {
                 <img
                   src="https://flagsapi.com/US/shiny/64.png"
                   alt=""
-                  className="w-8 mx-auto"
+                  className="xl:w-8 w-6 mx-auto"
                 />
-                <span className="text-sm">{"Change currency"}</span>
+                <span className="xl:text-sm text-xs">{"Change currency"}</span>
               </div>
-              <span className="text-2xl">{"$ 89.45"}</span>
+              <span className="xl:text-2xl text-base">{"$ 89.45"}</span>
             </div>
-            <div className="flex justify-between items-stretch px-16">
-              <button className="bg-[#E6E6E6] text-[#505050] border border-[#505050] self-start rounded-full text-2xl p-2">
+            <div className="flex justify-between items-stretch xl:px-16 px-6">
+              <button className="bg-[#E6E6E6] text-[#505050] border border-[#505050] self-start rounded-full xl:text-2xl text-lg p-1">
                 <BsCartDash />
               </button>
-              <button className="bg-[#E6E6E6] text-[#505050] border border-[#505050] self-end rounded-full text-2xl p-2">
+              <button className="bg-[#E6E6E6] text-[#505050] border border-[#505050] self-end rounded-full xl:text-2xl text-lg p-1">
                 <BsCartPlus />
               </button>
             </div>
@@ -150,35 +158,37 @@ const Detail = () => {
 
         <TabPanel id={tab} setId={changeTab} />
 
-<div className="mobile:hidden">
-        {tab === 1 ? (
-          <Tab1 data={bolt.kit} />
-        ) : tab === 2 ? (
-          <Tab2 data={bolt.part} images={bolt.images} />
-        ) : tab === 3 ? (
-          <Tab3 data={bolt.installation} />
-        ) : tab === 4 ? (
-          <Tab4 data={bolt.related} />
-        ) : (
-          <Tab5 data={bolt.replacement} />
-        )}
-</div>
-<div className="hidden mobile:block">
-        {
-        tab === 1 ? (
-          <Tab0 imageSet={getValue(bolt.part, 'Image')} images={bolt.images} />
-        ) : tab === 2 ? (
-          <Tab1 data={bolt.kit} />
-        ) : tab === 3 ? (
-          <Tab2 data={bolt.part} images={bolt.images} />
-        ) : tab === 4 ? (
-          <Tab3 data={bolt.installation} />
-        ) : tab === 5 ? (
-          <Tab4 data={bolt.related} />
-        ) : (
-          <Tab5 data={bolt.replacement} />
-        )}
-</div>
+        <div className="lg:block hidden">
+          {tab === 1 ? (
+            <Tab1 data={bolt.kit} />
+          ) : tab === 2 ? (
+            <Tab2 data={bolt.part} images={bolt.images} />
+          ) : tab === 3 ? (
+            <Tab3 data={bolt.installation} />
+          ) : tab === 4 ? (
+            <Tab4 data={bolt.related} />
+          ) : (
+            <Tab5 data={bolt.replacement} />
+          )}
+        </div>
+        <div className="lg:hidden block">
+          {tab === 1 ? (
+            <Tab0
+              imageSet={getValue(bolt.part, "Image")}
+              images={bolt.images}
+            />
+          ) : tab === 2 ? (
+            <Tab1 data={bolt.kit} />
+          ) : tab === 3 ? (
+            <Tab2 data={bolt.part} images={bolt.images} />
+          ) : tab === 4 ? (
+            <Tab3 data={bolt.installation} />
+          ) : tab === 5 ? (
+            <Tab4 data={bolt.related} />
+          ) : (
+            <Tab5 data={bolt.replacement} />
+          )}
+        </div>
       </div>
     </>
   );

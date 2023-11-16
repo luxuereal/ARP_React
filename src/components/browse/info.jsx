@@ -1,14 +1,14 @@
 const Info = ({ image, id, series, bolt }) => {
   return (
-    <div className="grid grid-cols-3 mr-8 mobile:flex mobile:flex-col mobile:mr-0">
-      <img src={image} alt="" className="w-full h-[calc(100%-36px)] p-4 mobile:h-72 object-contain" />
-      <div className="col-span-2 p-4 mobile:p-0 mobile:my-2">
-        <h3 className="text-2xl mobile:text-lg mobile:font-bold">{`Kit #: ${id}`}</h3>
-        <h3 className="text-2xl mobile:text-lg mobile:font-bold">{series}</h3>
+    <div className="grid lg:grid-cols-3 grid-cols-1 xl:mr-8 mr-2 mobile:flex mobile:flex-col mobile:mr-0">
+      <img src={image} alt="" className="w-full lg:h-[calc(100%-36px)] p-4 h-72 object-contain" />
+      <div className="col-span-2 xl:p-4 p-1 mobile:p-0 mobile:my-2">
+        <h3 className="xl:text-2xl text-xl mobile:text-lg mobile:font-bold">{`Kit #: ${id}`}</h3>
+        <h3 className="xl:text-2xl text-xl mobile:text-lg mobile:font-bold">{series}</h3>
         <div className="w-full flex justify-end mobile:mb-4">
           <a
             href={`${id}/detail`}
-            className="rounded-md bg-[#818181] text-[#D3D3D3] py-2 px-8 text-lg mr-4 mobile:py-1 mobile:px-6"
+            className="rounded-md bg-[#818181] text-[#D3D3D3] xl:py-2 xl:px-8 xl:text-lg xl:mr-4 py-1 px-4 mr-2 mobile:py-1 mobile:px-6"
           >
             {"Kit Instructions"}
           </a>

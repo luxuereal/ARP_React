@@ -20,7 +20,7 @@ const Tab2 = ({ data, images }) => {
         ))}
       </Carousel>
       
-      <div className="grid grid-cols-2 mobile:grid-cols-1 w-full gap-x-8 gap-y-2">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mobile:grid-cols-1 w-full gap-x-8 gap-y-2">
         {data
           .filter((opt) => opt.name !== "Model" && opt.name !== "Image")
           .map((opt, id) => (
