@@ -2,7 +2,7 @@ import { FiMenu, FiSearch } from "react-icons/fi";
 
 const Sidebar = ({ pathCase }) => {
   return (
-    <nav className="w-[360px] h-full bg-[#4B4A4A]">
+    <nav className="w-[360px] h-full bg-[#4B4A4A] mobile:h-[110px] mobile:w-full">
       <div className="w-full h-20 p-2 bg-[#3E3E3E] flex justify-between items-center justify-items-stretch border-b border-normalGray">
         <button className="w-10 h-10 rounded-full bg-white justify-self-start">
           <span className="flex justify-center text-xl">
@@ -16,20 +16,20 @@ const Sidebar = ({ pathCase }) => {
             className="h-full object-contain"
           />
         </a>
-        <button className="w-10 h-10 rounded-full bg-white justify-self-end">
-          <span className="flex justify-center text-xl">
+        <a href="/browse/results" className="w-10 h-10 rounded-full bg-white justify-self-end flex items-center justify-center">
+          <span className="text-xl">
             <FiSearch />
           </span>
-        </button>
+        </a>
       </div>
 
-      <div className="w-full border-b border-normalGray py-1 text-center">
+      <div className="w-full border-b border-normalGray py-0.5 text-center">
         <span className="text-[#A0A0A0]">
           {"Browse"}&nbsp;{">"}&nbsp;{"Rod Bolts"}
         </span>
       </div>
 
-      <div className="w-full px-8 py-4 flex flex-col justify-items-stretch gap-3">
+      <div className="w-full px-8 py-4 flex flex-col justify-items-stretch gap-3 mobile:hidden">
         <h3 className="w-full text-[#D3D3D3] text-2xl text-center">
           {"Rod Bolts"}
         </h3>
