@@ -1,7 +1,7 @@
 const TabPanel = ({ id, setId }) => {
   return (
     <>
-      <div className="w-full grid grid-cols-5 h-16 bg-[#E6E6E6] rounded-t-2xl border border-normalGray mobile:hidden">
+      <div className="w-full lg:grid lg:grid-cols-5 h-16 bg-[#E6E6E6] mt-4 rounded-t-2xl border border-normalGray hidden">
         <button
           className={
             id === 1
@@ -54,7 +54,7 @@ const TabPanel = ({ id, setId }) => {
         </button>
       </div>
 
-      <div className="w-full grid grid-cols-3 bg-[#E6E6E6] border border-normalGray xsm:hidden">
+      <div className="w-full grid grid-cols-3 bg-[#E6E6E6] border border-normalGray lg:hidden">
         <button
           className={
             id === 1
