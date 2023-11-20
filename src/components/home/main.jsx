@@ -48,7 +48,7 @@ const Main = () => {
         ))}
       </Carousel>
 
-      <nav className="absolute bottom-20 mobile:bottom-52 h-32 mobile:h-24 w-full py-4 px-8 mobile:p-0 bg-white bg-opacity-30 border border-normalGray">
+      <nav className="absolute bottom-20 mobile:bottom-28 h-32 mobile:h-24 w-full py-4 px-8 mobile:p-0 bg-white bg-opacity-30 border border-normalGray">
         <div className="w-full h-full grid lg:grid-cols-6 grid-cols-3 border-2 border-normalGray">
           {navs.map((nav, id) => (
             <Link to={nav.url} key={`nav-${id}`}>
