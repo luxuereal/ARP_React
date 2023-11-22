@@ -29,3 +29,43 @@ code {
 .ibm-font {
   font-family: 'IBM Plex Sans Thai', sans-serif;
 }
+
+.mobile-menu:nth-child(1) > ul {
+  width: 260%;
+  left: 20%;
+  margin-bottom: 13px;
+}
+.mobile-menu:nth-child(4) > ul {
+  width: 260%;
+  left: 20%;
+  margin-bottom: 60px;
+}
+.mobile-menu:nth-child(2) > ul {
+  width: 260%;
+  left: -80%;
+  margin-bottom: 13px;
+}
+.mobile-menu:nth-child(5) > ul {
+  width: 260%;
+  left: -80%;
+  margin-bottom: 60px;
+}
+.mobile-menu:nth-child(3) > ul {
+  width: 260%;
+  right: 20%;
+  margin-bottom: 13px;
+}
+.mobile-menu:nth-child(6) > ul {
+  width: 260%;
+  right: 20%;
+  margin-bottom: 60px;
+}
+
+.mobile-menu > ul > li > a {
+  display: block !important;
+}
+
+.mobile-menu > ul > li > a:hover {
+  background-color: #707070;
+  color: white;
+}

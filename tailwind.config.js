@@ -17,9 +17,10 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
+      gray: colors.gray,
       normalGray: '#707070'
     }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
 
