@@ -74,6 +74,11 @@ code {
   color: white;
 }
 
+.header-menu > ul > li > a:hover {
+  background-color: #707070;
+  color: white;
+}
+
 @media screen and (min-width: 1024px) {
   .mobile-menu:nth-child(1) > ul {
     width: 200%;
