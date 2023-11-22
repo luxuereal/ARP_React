@@ -65,7 +65,7 @@ export const navigations = [
         name: 'Tools & Ultra-Torque', value: '/tools'
       },
       {
-        name: 'Full List of Fastener Types', value: '/full_list'
+        name: 'Full List of Fastener Types', value: '/full_fastener'
       }
     ]
   },
@@ -91,7 +91,7 @@ export const navigations = [
         name: 'Hemi', value: '/hemi'
       },
       {
-        name: 'Full List of Makes', value: '/full_list'
+        name: 'Full List of Makes', value: '/full_make'
       }
     ]
   },
@@ -117,7 +117,7 @@ export const navigations = [
         name: 'FAQ', value: '/faq'
       },
       {
-        name: 'Submit a Tech Question', value: '/submit_question'
+        name: 'Submit a Tech Question', value: '/submit_teque'
       }
     ]
   },
@@ -145,7 +145,7 @@ export const navigations = [
         name: 'Register a Kit', value: '/register_kit'
       },
       {
-        name: 'Submit a Question', value: '/submit_question'
+        name: 'Submit a Question', value: '/submit_que'
       },
       {
         name: 'FAQ', value: '/faq'

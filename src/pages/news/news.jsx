@@ -1,8 +1,6 @@
 const News = () => {
   return (
-    <div>
-      News
-    </div>
+    <p>News</p>
   )
 }
 

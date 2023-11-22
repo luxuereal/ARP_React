@@ -27,7 +27,7 @@ const Header = () => {
         </a>
 
         <div className="absolute top-0 w-full h-full flex justify-end items-center mobile:hidden">
-          <div className="2xl:mr-56 xl:mr-40 lg:mr-32 md:mr-24 sm:mr-16 xsm:hidden">
+          <div className="2xl:mr-56 xl:mr-40 lg:mr-32 md:mr-24 sm:mr-16 hidden sm:block">
             <div className="w-full h-full relative">
               <input className="bg-[#D3D3D3] max-w-[80] 2xl:w-80 2xl:h-10 lg:w-60 lg:h-8 md:w-48 md:h-6 sm:w-32 sm:h-6 border !border-[#D3D3D3] outline-none rounded-md" />
               <button className="absolute bg-white 2xl:w-10 2xl:h-10 2xl:-ml-5 lg:w-8 lg:h-8 lg:-ml-4 md:w-6 md:h-6 md:-ml-3 sm:w-6 sm:h-6 sm:-ml-3 text-normalGray border border-normalGray rounded-full">
