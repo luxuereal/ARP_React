@@ -1,8 +1,8 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-import { slides, navs } from "../../utility/contents/home";
+import { slides, navigations } from "../../utility/contents/home";
 
 const Main = () => {
   return (
@@ -49,15 +49,29 @@ const Main = () => {
       </Carousel>
 
       <nav className="absolute bottom-20 mobile:bottom-28 h-32 mobile:h-24 w-full py-4 px-8 mobile:p-0 bg-white bg-opacity-30 border border-normalGray">
-        <div className="w-full h-full grid lg:grid-cols-6 grid-cols-3 border-2 border-normalGray">
-          {navs.map((nav, id) => (
-            <Link to={nav.url} key={`nav-${id}`}>
-              <div className="text-black lg:text-3xl md:text-2xl sm:text-xl cursor-pointer h-full w-full flex items-center bg-white border-x mobile:border border-normalGray">
-                <span className="w-full text-center text-normalGray">
-                  {nav.name}
+        <div className="w-full h-full grid lg:grid-cols-6 grid-cols-3 border border-normalGray">
+          {navigations.map((nav, id) => (
+            <div key={`nav-${id}`} className="dropdown dropdown-top mobile-menu">
+              <button className="text-black lg:text-3xl md:text-2xl sm:text-xl cursor-pointer h-full w-full flex items-center bg-white border-x mobile:border border-normalGray hover:bg-[#707070]" tabIndex={id} >
+                <span className="w-full text-center text-normalGray hover:text-white">
+                  {nav.title}
                 </span>
-              </div>
-            </Link>
+              </button>
+              <ul tabIndex={id} className="dropdown-content z-[1] menu p-2 rounded-md shadow bg-[#EBEBEB] border border-[#707070]">
+                {
+                  nav.sub.map((each, idx) =>
+                    <li key={`menu-${id}-${idx}`} className="py-1 text-lg">
+                      {
+                        each.input ?
+                          <input type="text" className="placeholder:text-center border border-[#707070]" placeholder={each.name} />
+                        :
+                          <a href={each.value} className="w-full text-center text-[#707070]">{each.name}</a>
+                      }
+                    </li>
+                  )
+                }
+              </ul>
+            </div>
           ))}
         </div>
       </nav>
