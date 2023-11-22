@@ -69,3 +69,77 @@ code {
   background-color: #707070;
   color: white;
 }
+
+.mobile-menu > button:hover > span {
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-menu:nth-child(1) > ul {
+    width: 200%;
+    left: 50%;
+    margin-bottom: 20px;
+  }
+  .mobile-menu:nth-child(4) > ul {
+    width: 200%;
+    left: 50%;
+    margin-bottom: 20px;
+  }
+  .mobile-menu:nth-child(2) > ul {
+    width: 200%;
+    left: 50%;
+    margin-bottom: 20px;
+  }
+  .mobile-menu:nth-child(5) > ul {
+    width: 200%;
+    left: -150%;
+    margin-bottom: 20px;
+  }
+  .mobile-menu:nth-child(3) > ul {
+    width: 200%;
+    left: 50%;
+    margin-bottom: 20px;
+  }
+  .mobile-menu:nth-child(6) > ul {
+    width: 200%;
+    right: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1023px)  {
+  .mobile-menu > button {
+    border-width: 1px;
+    border-color: #707070;
+  }
+  .mobile-menu:nth-child(1) > ul {
+    width: 200%;
+    left: 50%;
+    margin-bottom: 20px;
+  }
+  .mobile-menu:nth-child(4) > ul {
+    width: 200%;
+    left: 50%;
+    margin-bottom: 60px;
+  }
+  .mobile-menu:nth-child(2) > ul {
+    width: 200%;
+    left: -50%;
+    margin-bottom: 20px;
+  }
+  .mobile-menu:nth-child(5) > ul {
+    width: 200%;
+    left: -50%;
+    margin-bottom: 60px;
+  }
+  .mobile-menu:nth-child(3) > ul {
+    width: 200%;
+    right: 50%;
+    margin-bottom: 20px;
+  }
+  .mobile-menu:nth-child(6) > ul {
+    width: 200%;
+    right: 50%;
+    margin-bottom: 60px;
+  }
+}

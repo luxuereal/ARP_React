@@ -1,8 +1,8 @@
 import { FiMenu, FiSearch } from "react-icons/fi";
 
-const Sidebar = ({ pathCase }) => {
+const Sidebar = ({ pathCase, setPage }) => {
   return (
-    <nav className="w-[360px] h-full bg-[#4B4A4A] mobile:h-[110px] mobile:w-full">
+    <nav className="w-[360px] h-full bg-[#4B4A4A]">
       <div className="w-full h-20 p-2 bg-[#3E3E3E] flex justify-between items-center justify-items-stretch border-b border-normalGray">
         <button className="w-10 h-10 rounded-full bg-white justify-self-start">
           <span className="flex justify-center text-xl">
@@ -29,7 +29,7 @@ const Sidebar = ({ pathCase }) => {
         </span>
       </div>
 
-      <div className="w-full px-8 py-4 flex flex-col justify-items-stretch gap-3 mobile:hidden">
+      <div className="w-full px-8 py-4 flex flex-col justify-items-stretch gap-3">
         <h3 className="w-full text-[#D3D3D3] text-2xl text-center">
           {"Rod Bolts"}
         </h3>
@@ -42,12 +42,12 @@ const Sidebar = ({ pathCase }) => {
         <button className="text-lg font-bold py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#B2B1B1] text-center">
           {"2. Engine"}
         </button>
-        <a
-          href={`/browse/results`}
+        <button
+          onClick={() => setPage(false)}
           className="ml-[35%] justify-self-end text-lg font-bold py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#ED1C24] text-center"
         >
           {"Find"}
-        </a>
+        </button>
         <hr className="border-2 border-[#707070]" />
         <h6 className="mt-2 w-full text-[#A0A0A0] text-base text-center">
           {"Pro Series Rod Bolts by Dimensions"}
@@ -62,7 +62,7 @@ const Sidebar = ({ pathCase }) => {
           {"Find"}
         </button>
         <hr className="border-2 border-[#707070]" />
-        {pathCase === 0 ? (
+        {pathCase === 0 ? 
           <>
             <button className="text-lg py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
               {"Rod Bolt Instructions"}
@@ -71,24 +71,22 @@ const Sidebar = ({ pathCase }) => {
               {"Tech Videos"}
             </button>
           </>
-        ) : (
-          pathCase === 2 && (
-            <div className="mx-6 grid grid-cols-2 gap-2">
-              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Instructions"}
-              </button>
-              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Rod Bolt Tech"}
-              </button>
-              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Tech Videos"}
-              </button>
-              <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
-                {"Rod Bolt FAQ"}
-              </button>
-            </div>
-          )
-        )}
+        : 
+          <div className="mx-6 grid grid-cols-2 gap-2">
+            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Instructions"}
+            </button>
+            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Rod Bolt Tech"}
+            </button>
+            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Tech Videos"}
+            </button>
+            <button className="text-lg py-1 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
+              {"Rod Bolt FAQ"}
+            </button>
+          </div>
+        }
       </div>
     </nav>
   );
