@@ -5,7 +5,7 @@ import { slides, navigations } from "../../utility/contents/home";
 
 const Main = () => {
   return (
-    <section className="w-full h-full z-10 relative">
+    <section className="w-full h-full z-0 relative">
       
       <Carousel
         showThumbs={false}
