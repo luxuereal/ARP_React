@@ -30,7 +30,7 @@ const Main = () => {
               </div>
               <img
                 src={slide.image}
-                className="z-10 col-span-3 h-[100vh] object-cover mask-image"
+                className="z-10 col-span-3 h-[100vh] max-h-[840px] object-cover mask-image"
                 alt=""
               />
             </div>
@@ -47,7 +47,7 @@ const Main = () => {
         ))}
       </Carousel>
 
-      <nav className="absolute bottom-20 mobile:bottom-28 h-32 mobile:h-24 w-full py-4 px-8 mobile:p-0 bg-white bg-opacity-30 border border-normalGray">
+      <nav className="absolute bottom-28 mobile:bottom-28 h-32 mobile:h-24 w-full py-4 px-8 mobile:p-0 bg-white bg-opacity-30 border border-normalGray">
         <div className="w-full h-full grid lg:grid-cols-6 grid-cols-3 border border-normalGray">
           {navigations.map((nav, id) => (
             <div key={`nav-${id}`} className="dropdown dropdown-top mobile-menu">
