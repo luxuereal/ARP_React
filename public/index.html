@@ -28,6 +28,31 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      #root {
+        overflow-x: hidden;
+      }
+      @media screen and (min-width: 431px) {
+        body {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: black;
+        }
+
+        #root {
+          max-width: 1600px;
+          max-height: 840px;
+          position: relative;
+          overflow: hidden;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 0 8px rgba(255,255,255,.5), 0 0 8px rgba(255,255,255,.5);
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

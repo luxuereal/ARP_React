@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-black w-full h-20 xsm:fixed xsm:bottom-0 mobile:h-28 z-10 xl:p-4 p-2">
+    <footer className="bg-black w-full h-20 xsm:absolute xsm:bottom-0 mobile:h-28 z-10 xl:p-4 p-2">
       <div className="w-full h-full relative">
         <div className="absolute mobile:w-full h-full mobile:bottom-32 my-auto lg:left-8 md:left-6 flex xl:gap-4 lg:gap-3 md:gap-2 mobile:gap-4 gap-1 items-center mobile:justify-center z-20">
           {["F", "T", "I", "Y", "U"].map((num, id) => (
