@@ -19,7 +19,7 @@ const Main = () => {
               className="w-full h-full grid grid-cols-4 mobile:hidden relative"
             >
               <div className="h-full bg-white z-10 flex items-center">
-                <div className="w-80 ibm-font text-black ml-12 z-20">
+                <div className="w-80 ibm-font text-black ml-12 z-20 slide-text">
                   <p className="2xl:text-6xl lg:text-5xl sm:text-4xl">
                     {slide.text.title}
                   </p>
@@ -51,20 +51,20 @@ const Main = () => {
         <div className="w-full h-full grid lg:grid-cols-6 grid-cols-3 border border-normalGray">
           {navigations.map((nav, id) => (
             <div key={`nav-${id}`} className="dropdown dropdown-top mobile-menu">
-              <button className="text-black lg:text-3xl md:text-2xl sm:text-xl cursor-pointer h-full w-full flex items-center bg-white border-x mobile:border border-normalGray hover:bg-[#707070]" tabIndex={id} >
-                <span className="w-full text-center text-normalGray hover:text-white">
+              <button className="flexible lg:text-3xl md:text-2xl sm:text-xl cursor-pointer h-full w-full flex items-center bg-white border-x mobile:border border-normalGray text-normalGray hover:bg-[#707070] hover:text-white focus:bg-[#ED1C24] focus:text-white" tabIndex={id} >
+                <span className="flexible w-full text-center">
                   {nav.title}
                 </span>
               </button>
-              <ul tabIndex={id} className="dropdown-content z-[1] menu p-2 rounded-md shadow bg-[#EBEBEB] border border-[#707070]">
+              <ul tabIndex={id} className="flexible dropdown-content z-[1] menu p-2 rounded-md shadow bg-[#EBEBEB] border border-[#707070] border-b-4 border-b-[#ED1C24]">
                 {
                   nav.sub.map((each, idx) =>
-                    <li key={`menu-${id}-${idx}`} className="py-1 text-lg">
+                    <li key={`menu-${id}-${idx}`} className="flexible py-1 text-lg">
                       {
                         each.input ?
                           <input type="text" className="placeholder:text-center border border-[#707070]" placeholder={each.name} />
                         :
-                          <a href={each.value} className="w-full text-center text-[#707070]">{each.name}</a>
+                          <a href={each.value} className="flexible w-full text-center text-[#707070]">{each.name}</a>
                       }
                     </li>
                   )

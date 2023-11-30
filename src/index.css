@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .flexible {
+    @apply transition ease-in-out duration-300;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -83,35 +89,48 @@ code {
   color: white;
 }
 
+.slide-text {
+  margin-top: -200px;
+  animation-name: text-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes text-animation {
+  from {opacity:0; margin-top: -200px;}
+  to {opacity: 1; margin-top: 0;}
+}
+
 @media screen and (min-width: 1024px) {
   .mobile-menu:nth-child(1) > ul {
-    width: 200%;
-    left: 50%;
+    width: 150%;
+    left: 0;
     margin-bottom: 20px;
   }
   .mobile-menu:nth-child(4) > ul {
-    width: 200%;
-    left: 50%;
+    width: 150%;
+    left: -50%;
     margin-bottom: 20px;
   }
   .mobile-menu:nth-child(2) > ul {
-    width: 200%;
-    left: 50%;
+    width: 150%;
+    left: 0;
     margin-bottom: 20px;
   }
   .mobile-menu:nth-child(5) > ul {
-    width: 200%;
-    left: -150%;
+    width: 150%;
+    left: -50%;
     margin-bottom: 20px;
   }
   .mobile-menu:nth-child(3) > ul {
-    width: 200%;
-    left: 50%;
+    width: 150%;
+    left: 0;
     margin-bottom: 20px;
   }
   .mobile-menu:nth-child(6) > ul {
-    width: 200%;
-    right: 50%;
+    width: 150%;
+    right: 0;
     margin-bottom: 20px;
   }
 }

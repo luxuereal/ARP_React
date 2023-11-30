@@ -4,11 +4,24 @@ const Sidebar = ({ pathCase, setPage }) => {
   return (
     <nav className="w-[360px] h-full bg-[#4B4A4A]">
       <div className="w-full h-20 p-2 bg-[#3E3E3E] flex justify-between items-center justify-items-stretch border-b border-normalGray">
-        <button className="w-10 h-10 rounded-full bg-white justify-self-start">
-          <span className="flex justify-center text-xl">
-            <FiMenu />
-          </span>
-        </button>
+        <div className="dropdown">
+          <button tabIndex={201} className="w-10 h-10 rounded-full bg-white justify-self-start">
+            <span className="flex justify-center text-xl">
+              <FiMenu />
+            </span>
+          </button>
+          <ul tabIndex={201} className="dropdown-content w-[360px] mt-5 -ml-2 z-0 menu p-2 py-4 shadow rounded-none text-lg bg-[#EBEBEB] border border-[#707070]">
+            <li className="p-1"><a href="/">{'ARP in Action or # ARPstrong'}</a></li>
+            <li className="p-1"><a href="/">{'How We Make Our Fasteners'}</a></li>
+            <li className="p-1"><a href="/">{'Made in USA'}</a></li>
+            <li className="p-1"><a href="/">{'New Kit Examples > Full List'}</a></li>
+            <li className="p-1"><a href="/">{'Diesel Kits'}</a></li>
+            <li className="p-1"><a href="/">{'LS & LT Kits'}</a></li>
+            <li className="p-1"><a href="/">{'Coyote Kits'}</a></li>
+            <li className="p-1"><a href="/">{'Contact Us'}</a></li>
+          </ul>
+        </div>
+
         <a href="/" className="justify-self-center h-full">
           <img
             src="/assets/logo.png"
@@ -16,11 +29,17 @@ const Sidebar = ({ pathCase, setPage }) => {
             className="h-full object-contain"
           />
         </a>
-        <a href="/browse/results" className="w-10 h-10 rounded-full bg-white justify-self-end flex items-center justify-center">
-          <span className="text-xl">
-            <FiSearch />
-          </span>
-        </a>
+
+        <div className="dropdown dropdown-end">
+          <button tabIndex={202} className="w-10 h-10 rounded-full bg-white justify-self-end flex items-center justify-center">
+            <span className="flex justify-center text-xl">
+              <FiSearch />
+            </span>
+          </button>
+          <ul tabIndex={202} className="dropdown-content w-[360px] mt-5 -mr-2 z-0 menu p-2 shadow bg-[#EBEBEB] border border-[#707070] rounded-none text-lg">
+            <li><input type="text" placeholder="Search all" /></li>
+          </ul>
+        </div>
       </div>
 
       <div className="w-full border-b border-normalGray py-0.5 text-center">

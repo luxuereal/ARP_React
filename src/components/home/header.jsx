@@ -42,12 +42,13 @@ const Header = () => {
         </div>
 
         <div className="dropdown absolute top-0 header-menu">
-          <button tabIndex={101} className="hidden mobile:block mt-2 ml-2 left-3 w-10 h-10 rounded-full bg-white justify-self-start">
+          <button tabIndex={101} className="mt-4 ml-4 mobile:mt-2 mobile:ml-2 left-3 w-10 h-10 rounded-full bg-white justify-self-start">
             <span className="flex justify-center text-xl">
               <FiMenu />
             </span>
           </button>
-          <ul tabIndex={101} className="dropdown-content w-[100vw] mt-2 z-0 menu p-2 shadow rounded-none text-lg bg-[#EBEBEB] border border-[#707070]">
+          <ul tabIndex={101} className="dropdown-content mobile:w-[100vw] w-[320px] mobile:mt-2 -mt-16 z-0 menu p-2 py-4 shadow rounded-none text-lg bg-[#EBEBEB] border border-[#707070]">
+            <li className="p-1 mobile:hidden h-4 bg-transparent"></li>
             <li className="p-1"><a href="/">{'ARP in Action or # ARPstrong'}</a></li>
             <li className="p-1"><a href="/">{'How We Make Our Fasteners'}</a></li>
             <li className="p-1"><a href="/">{'Made in USA'}</a></li>
