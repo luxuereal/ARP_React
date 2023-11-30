@@ -33,11 +33,23 @@ const DetailBolt = () => {
       <div className="flex w-full h-full mobile:flex-col">
         <nav className="w-[360px] h-full bg-[#E6E6E6] mobile:hidden">
           <div className="w-full h-32 p-2 bg-[#3E3E3E] flex justify-between items-stretch justify-items-stretch border-b border-normalGray">
-            <button className="w-10 h-10 rounded-full bg-white self-end justify-self-start">
-              <span className="flex justify-center text-xl">
-                <FiMenu />
-              </span>
-            </button>
+            <div className="dropdown self-end justify-self-start">
+              <button tabIndex={301} className="w-10 h-10 rounded-full bg-white justify-self-start">
+                <span className="flex justify-center text-xl">
+                  <FiMenu />
+                </span>
+              </button>
+              <ul tabIndex={301} className="dropdown-content w-[360px] mt-2 -ml-2 z-0 menu p-2 py-4 shadow rounded-none text-lg bg-[#EBEBEB] border border-[#707070]">
+                <li className="p-1"><a href="/">{'ARP in Action or # ARPstrong'}</a></li>
+                <li className="p-1"><a href="/">{'How We Make Our Fasteners'}</a></li>
+                <li className="p-1"><a href="/">{'Made in USA'}</a></li>
+                <li className="p-1"><a href="/">{'New Kit Examples > Full List'}</a></li>
+                <li className="p-1"><a href="/">{'Diesel Kits'}</a></li>
+                <li className="p-1"><a href="/">{'LS & LT Kits'}</a></li>
+                <li className="p-1"><a href="/">{'Coyote Kits'}</a></li>
+                <li className="p-1"><a href="/">{'Contact Us'}</a></li>
+              </ul>
+            </div>
             <a href="/">
               <img
                 src="/assets/logo.png"
@@ -45,11 +57,17 @@ const DetailBolt = () => {
                 className="justify-self-center h-20 object-contain self-start"
               />
             </a>
-            <button className="w-10 h-10 rounded-full bg-white self-end justify-self-end">
-              <span className="flex justify-center text-xl">
-                <FiSearch />
-              </span>
-            </button>
+
+            <div className="dropdown dropdown-end self-end justify-self-end">
+              <button tabIndex={302} className="w-10 h-10 rounded-full bg-white justify-self-end flex items-center justify-center">
+                <span className="flex justify-center text-xl">
+                  <FiSearch />
+                </span>
+              </button>
+              <ul tabIndex={302} className="dropdown-content w-[360px] mt-2 -mr-2 z-0 menu p-2 shadow bg-[#EBEBEB] border border-[#707070] rounded-none text-lg">
+                <li><input type="text" placeholder="Search all" /></li>
+              </ul>
+            </div>
           </div>
 
           <div className="w-full border-b border-normalGray py-1 text-center bg-black">
@@ -58,7 +76,7 @@ const DetailBolt = () => {
             </span>
           </div>
 
-          <div className="w-full px-8 py-4 flex flex-col justify-items-center gap-3 mobile:hidden">
+          <div className="w-full px-8 py-4 flex flex-col justify-items-center gap-3 mobile:hidden overflow-y-auto">
             <a
               href="./"
               className="mx-auto text-center flex items-center"
@@ -70,7 +88,7 @@ const DetailBolt = () => {
             <img
               src={getValue(bolt.part, "Image")}
               alt=""
-              className="h-96 px-6 py-2"
+              className="h-80 px-6 py-2 object-contain"
             />
 
             <button className="text-lg py-1 mx-6 rounded-md text-[#D3D3D3] bg-[#818181] text-center">
