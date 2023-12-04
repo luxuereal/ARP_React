@@ -59,12 +59,12 @@ const Main = () => {
               <ul tabIndex={id} className="flexible dropdown-content z-[1] menu p-2 rounded-md shadow bg-[#EBEBEB] border border-[#707070] border-b-4 border-b-[#ED1C24]">
                 {
                   nav.sub.map((each, idx) =>
-                    <li key={`menu-${id}-${idx}`} className="flexible py-1 text-lg">
+                    <li key={`menu-${id}-${idx}`} className="flexible py-1">
                       {
                         each.input ?
-                          <input type="text" className="placeholder:text-center border border-[#707070]" placeholder={each.name} />
+                          <input type="text" className="placeholder:text-center border border-[#707070] xl:text-base text-xs" placeholder={each.name} />
                         :
-                          <a href={each.value} className="flexible w-full text-center text-[#707070]">{each.name}</a>
+                          <a href={each.value} className="flexible w-full text-center text-[#707070] xl:text-lg text-base">{each.name}</a>
                       }
                     </li>
                   )

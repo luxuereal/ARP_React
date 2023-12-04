@@ -26,8 +26,8 @@ const Header = () => {
           </div>
         </a>
 
-        <div className="absolute top-0 w-full h-full flex justify-end items-center mobile:hidden">
-          <div className="2xl:mr-56 xl:mr-40 lg:mr-32 md:mr-24 sm:mr-16 hidden sm:block">
+        <div className="absolute top-0 w-full h-full flex justify-end lg:mt-6 mt-4 mobile:hidden">
+          <div className="lg:mr-32 md:mr-24 mr-16 hidden sm:block">
             <div className="w-full h-full relative">
               <input className="bg-[#D3D3D3] max-w-[80] 2xl:w-80 2xl:h-10 lg:w-60 lg:h-8 md:w-48 md:h-6 sm:w-32 sm:h-6 border !border-[#D3D3D3] outline-none rounded-md" />
               <button className="absolute bg-white 2xl:w-10 2xl:h-10 2xl:-ml-5 lg:w-8 lg:h-8 lg:-ml-4 md:w-6 md:h-6 md:-ml-3 sm:w-6 sm:h-6 sm:-ml-3 text-normalGray border border-normalGray rounded-full">
@@ -41,8 +41,8 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="dropdown absolute top-0 header-menu">
-          <button tabIndex={101} className="mt-4 ml-4 mobile:mt-2 mobile:ml-2 left-3 w-10 h-10 rounded-full bg-white justify-self-start">
+        <div className="dropdown absolute top-0 header-menu z-40">
+          <button tabIndex={101} className="lg:mt-6 mt-4 lg:ml-32 md:ml-24 ml-16 mobile:mt-2 mobile:ml-2 mobile:w-10 mobile:h-10 left-3 2xl:w-10 2xl:h-10 lg:w-8 lg:h-8 md:w-6 md:h-6 sm:w-8 sm:h-8 rounded-full bg-white justify-self-start">
             <span className="flex justify-center text-xl">
               <FiMenu />
             </span>
