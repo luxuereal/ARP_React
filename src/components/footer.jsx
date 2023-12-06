@@ -27,6 +27,7 @@ const Footer = () => {
         <span className="absolute text-white xl:text-sm sm:text-[10px] text-[12px] bottom-24 xsm:bottom-0 xl:right-3 right-1 mobile:bottom-28 mobile:text-normalGray mobile:w-full mobile:text-center z-20">
           {"© 2023 Automotive Racing Products, Inc."}
         </span>
+
       </div>
     </footer>
   );
