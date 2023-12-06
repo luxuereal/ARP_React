@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import * as Sentry from "@sentry/react";
 
 import Home from "./pages/home";
 
@@ -58,23 +59,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/primary_engine",
-    element: <PrimaryEngine />,
-    errorElement: <NoMatch />,
+    element: <PrimaryEngine />
   },
   {
     path: "/primary_engine/rod_bolts",
-    element: <RodBoltsPage />,
-    errorElement: <NoMatch />
+    element: <RodBoltsPage />
   },
   {
     path: "/primary_engine/rod_bolts/:kitId",
-    element: <DetailBoltPage />,
-    errorElement: <NoMatch />
+    element: <DetailBoltPage />
   },
   {
     path: "/engine",
     element: <Engine />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/driveline",
@@ -89,162 +86,130 @@ const router = createBrowserRouter([
   {
     path: "/tools",
     element: <Tools />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/full_fastener",
     element: <FullFastener />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/search",
     element: <Search />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/complex_kit",
     element: <ComplexKit />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/diesel",
     element: <Diesel />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/ls_lt",
     element: <LsLt />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/coyote",
     element: <Coyote />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/hemi",
     element: <Hemi />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/full_make",
     element: <FullMake />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/instruations",
     element: <Instructions />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/detailed_inst",
     element: <DetailedInst />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/inst_video",
     element: <InstVideo />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/torque_stech",
     element: <TorqueStech />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/torque_chart",
     element: <TorqueChart />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/faq",
     element: <FAQ />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/submit_teque",
     element: <SubmitTeque />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/us_dealers",
     element: <USDealers />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/inter_dealers",
     element: <InterDealers />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/distributor",
     element: <Distributor />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/update_dealer",
     element: <UpdateDealer />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/register_kit",
     element: <RegisterKit />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/submit_que",
     element: <SubmitQue />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/fastener_tech",
     element: <FastenerTech />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/tech_videos",
     element: <TechVideos />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/manufacture",
     element: <Manufacture />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/quality_cert",
     element: <QualityCert />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/usa",
     element: <USA />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/news",
     element: <News />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/latest_kit",
     element: <LatestKit />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/racing_news",
     element: <RacingNews />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/events",
     element: <Events />,
-    errorElement: <NoMatch />,
   },
   {
     path: "/latest_news",
     element: <LatestNews />,
-    errorElement: <NoMatch />,
   }
 ]);
 
@@ -252,4 +217,4 @@ const App = () => {
   return <RouterProvider router={router} />;
 };
 
-export default App;
+export default Sentry.withProfiler(App);
